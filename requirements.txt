@@ -1,2 +1,6 @@
 streamlit
 google.generativeai
+streamlit_extras
+python-dotenv
+langcodes
+youtube_transcript_api
