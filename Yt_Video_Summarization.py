@@ -40,8 +40,8 @@ def extract_languages(video_id):
 
 def extract_transcript(video_id, language):
     try:
-        """If no captions are officially available for a video, 
-        YouTubeTranscriptApi can still return a transcript if YouTube has auto-generated captions."""
+        # If no captions are officially available for a video, 
+        # YouTubeTranscriptApi can still return a transcript if YouTube has auto-generated captions.
         transcript_content = YouTubeTranscriptApi.get_transcript(video_id=video_id, languages=[language])
         # Extract Transcript Content from JSON Response and Join to Single Response
         transcript = ' '.join([i['text'] for i in transcript_content])
